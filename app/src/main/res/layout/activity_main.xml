@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Digoxin Dose Calculator" android:textSize="24sp" android:textStyle="bold" android:layout_gravity="center" android:layout_marginBottom="24dp"/>
+
+        <TextView android:text="Age (years)" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold"/>
+        <EditText android:id="@+id/ageEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:hint="e.g., 65"/>
+
+        <TextView android:text="Actual Weight (kg)" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textStyle="bold"/>
+        <EditText android:id="@+id/weightEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" android:hint="e.g., 70.5"/>
+
+        <TextView android:text="Height (cm)" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textStyle="bold"/>
+        <EditText android:id="@+id/heightEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:hint="e.g., 170"/>
+
+        <TextView android:text="Serum Creatinine (mg/dL)" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textStyle="bold"/>
+        <EditText android:id="@+id/creatinineEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" android:hint="e.g., 1.2"/>
+
+        <TextView android:text="Target Css (mcg/L)" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textStyle="bold"/>
+        <EditText android:id="@+id/cssEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" android:hint="e.g., 0.8"/>
+
+        <TextView android:text="Gender" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textStyle="bold"/>
+        <RadioGroup android:id="@+id/genderRadioGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <RadioButton android:id="@+id/maleRadioButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Male" android:checked="true"/>
+            <RadioButton android:id="@+id/femaleRadioButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:text="Female"/>
+        </RadioGroup>
+
+        <TextView android:text="Diagnosis" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textStyle="bold"/>
+        <RadioGroup android:id="@+id/diagnosisRadioGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <RadioButton android:id="@+id/chfRadioButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Heart Failure (CHF)" android:checked="true"/>
+            <RadioButton android:id="@+id/afRadioButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Atrial Fibrillation (AF) only"/>
+            <RadioButton android:id="@+id/bothRadioButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Both CHF and AF"/>
+        </RadioGroup>
+
+        <TextView android:text="Route of Administration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textStyle="bold"/>
+        <RadioGroup android:id="@+id/routeRadioGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <RadioButton android:id="@+id/oralRadioButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Oral (PO)" android:checked="true"/>
+            <RadioButton android:id="@+id/ivRadioButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:text="Intravenous (IV)"/>
+        </RadioGroup>
+
+        <TextView android:text="Additional Parameters (Optional)" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:textStyle="bold" android:textColor="#555"/>
+        <EditText android:id="@+id/kRateEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" android:hint="K (Rate of elimination)"/>
+        <EditText android:id="@+id/interceptAEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" android:hint="A (Intercept)"/>
+        <EditText android:id="@+id/tHalfAEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" android:hint="T 1/2 A"/>
+        <EditText android:id="@+id/tHalfBEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" android:hint="T 1/2 B"/>
+
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate Dose"
+            android:layout_marginTop="24dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/errorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            tools:text="Error message"/>
+
+        <LinearLayout
+            android:id="@+id/resultsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp"
+            android:paddingBottom="50dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#F5F5F5">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView android:text="1. Dosing Information" android:textStyle="bold" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#333"/>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCC" android:layout_marginTop="4dp" android:layout_marginBottom="8dp"/>
+
+                    <TextView android:id="@+id/resultWeightTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#333" android:textStyle="bold" android:layout_marginBottom="8dp" tools:text="Patient Weight: 70.5 kg"/>
+
+                    <TextView android:text="Maintenance Dose:" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/resultMcgTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="24sp" android:textStyle="bold" android:textColor="#0066CC" tools:text="125 mcg"/>
+                    <TextView android:id="@+id/resultMgTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#555" android:layout_marginBottom="8dp" tools:text="(0.125 mg)"/>
+
+                    <TextView android:text="Loading Dose:" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/resultLdTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="20sp" android:textStyle="bold" android:textColor="#E65100" android:layout_marginBottom="8dp" tools:text="0.5 mg"/>
+
+                    <TextView android:text="Regimen:" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp"/>
+                    <TextView android:id="@+id/resultLdStep1" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#444" android:layout_marginStart="8dp" tools:text="• 50% Initially"/>
+                    <TextView android:id="@+id/resultLdStep2" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#444" android:layout_marginStart="8dp" tools:text="• 25% after 6 hrs"/>
+                    <TextView android:id="@+id/resultLdStep3" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#444" android:layout_marginStart="8dp" tools:text="• 25% after 12 hrs"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#E1F5FE">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView android:text="2. Basic PK Parameters" android:textStyle="bold" android:textSize="16sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#0277BD"/>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#81D4FA" android:layout_marginTop="4dp" android:layout_marginBottom="8dp"/>
+
+                    <TextView android:id="@+id/resultTotalClTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:textColor="#333" tools:text="Total Cl: 2.5 L/hr"/>
+                    <TextView android:id="@+id/resultVdTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:textColor="#333" tools:text="Vd: 250 L"/>
+                    <TextView android:id="@+id/resultKaTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:textColor="#333" tools:text="Ka: --"/>
+                    <TextView android:id="@+id/resultKeTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#333" tools:text="Ke: --"/>
+
+                    <TextView android:id="@+id/resultIbwTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:visibility="gone"/>
+                    <TextView android:id="@+id/resultCrClTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:visibility="gone"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#E8F5E9">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView android:text="3. Clinical PK Parameters" android:textStyle="bold" android:textSize="16sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#2E7D32"/>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#A5D6A7" android:layout_marginTop="4dp" android:layout_marginBottom="8dp"/>
+
+                    <TextView android:id="@+id/resultRouteInfoTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:textColor="#333" tools:text="Route: Oral (F=0.9)"/>
+                    <TextView android:id="@+id/resultHalfLifeTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:textColor="#333" tools:text="Half-Life (t1/2): 36 hrs"/>
+                    <TextView android:id="@+id/resultAucTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:textColor="#333" tools:text="AUC: 500"/>
+                    <TextView android:id="@+id/resultTmaxTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:textColor="#333" tools:text="Tmax: 2 hr"/>
+                    <TextView android:id="@+id/resultCmaxTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#333" tools:text="Cmax: 1.8"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
