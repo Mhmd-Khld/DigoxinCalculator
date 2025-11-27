@@ -16,7 +16,8 @@ object CalculationService {
             return null
         }
 
-        // *** التعديل هنا: F أصبحت 0.9 بدلاً من 0.7 للـ Oral ***
+        // *** التعديل هنا: F أصبحت 0.9
+        //بدلاً من 0.7 للـ Oral ***
         val bioAvailForDose = if (params.route == Route.IV) 1.0 else 0.9
 
         // 2. IBW
@@ -106,7 +107,7 @@ object CalculationService {
         // Display text for route
         val routeName = if (params.route == Route.IV) "IV (F=1.0)" else "Oral (F=0.9)"
 
-        // --- تجميع ---
+        // --- \\
         val dosingInfo = DosingInfo(
             patientWeight = String.format("%.1f kg", params.weight),
             doseMg = String.format("%.4f", maintenanceDoseMg),
