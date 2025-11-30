@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    tools:context=".ElderlyDosingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💊 Digoxin Dosing in Patients Over 75 Years Old"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#303F9F"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age significantly impacts digoxin pharmacokinetics, primarily due to changes in renal function, which is the main route of digoxin elimination."
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Effect of Age on Digoxin Dosage"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#00796B"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The key factor is the decline in creatinine clearance (CrCl) with increasing age, even if serum creatinine levels appear normal."
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="8dp"
+                android:text="1. Reduced Clearance: Digoxin is eliminated primarily by the kidneys. As people age (especially over 75), there is a physiological decline in the glomerular filtration rate (GFR) and CrCl."/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="8dp"
+                android:text="2. Accumulation Risk: Reduced kidney clearance means the drug stays in the body longer, increasing the half-life. If a standard dose is given, it will accumulate, leading to higher-than-desired serum concentrations and a significantly increased risk of Digoxin toxicity."/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="8dp"
+                android:text="3. Reduced Volume of Distribution: Older adults often have a decreased lean body mass, which can further reduce the volume of distribution for Digoxin, leading to even higher serum concentrations."/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="8dp"
+                android:text="4. Dosage Requirement: Patients over 75 years old generally require a significantly lower maintenance dose of Digoxin compared to younger adults."/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🧮 Calculating the dose"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#D84315"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Digoxin dosing in the elderly must be individualized and based on an estimation of their kidney function, not just their age or weight."
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The maintenance dose should be adjusted based on the calculated creatinine clearance (CrCl), often using the Cockcroft-Gault equation:"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CrCl = (140 - Age in years) × Weight in kg / 72 × Serum Creatinine in mg/dL (× 0.85 for female)"
+            android:textSize="17sp"
+            android:textStyle="italic"
+            android:textColor="#1976D2"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="#E3F2FD"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="* For patients with markedly reduced CrCl (e.g., &lt; 30 mL/min), the dose may need to be halved or administered less frequently."
+            android:textSize="15sp"
+            android:textColor="#777777"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‼ Essential Advice (Tips) for Digoxin Use in the Elderly"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#C2185B"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="8dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="8dp"
+                android:text="1. Start Low and Monitor Closely\n\t• Initial Dose: Use the lowest effective dose. The goal is often to achieve lower serum concentrations (e.g., 0.5 - 0.9 ng/mL).\n\t• TDM: Regularly measure serum Digoxin levels, especially after initiating or changing the dose, or if a potential drug interaction occurs."/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="8dp"
+                android:text="2. Monitor Kidney functions\n\t• Regular Checks: Assess serum creatinine and calculate CrCl at baseline and periodically. Even minor changes in renal function (e.g., due to dehydration, illness, or new medications like NSAIDs) can rapidly lead to toxicity."/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="8dp"
+                android:text="3. Watch for Signs of Toxicity\n\t• Atypical Presentation: Digoxin toxicity in the elderly may present with non-specific or atypical symptoms like confusion, lethargy, fatigue, or anorexia.\n\t• Cardiac Monitoring: Be vigilant for cardiac arrhythmias, such as bradycardia, new or worsening premature ventricular contractions (PVCs), or atrioventricular (AV) block."/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="8dp"
+                android:text="4. Manage electrolytes\n\t• Critical Balance: Hypokalemia (low potassium) and hypomagnesemia (low magnesium) can significantly increase the risk of Digoxin toxicity. Ensure these electrolytes are kept within the normal range."/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="8dp"
+                android:text="5. Review Drug Interactions\n\t• High Risk: Many common medications can increase Digoxin levels by interfering with its clearance. Key examples include Antiarrhythmics (Amiodarone, Propafenone, Quinidine), Calcium Channel Blockers (Verapamil, Diltiazem), and Antibiotics (Clarithromycin, Erythromycin).\n\t• Necessity Check: Regularly review the patient's entire medication list to ensure Digoxin is still indicated."/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

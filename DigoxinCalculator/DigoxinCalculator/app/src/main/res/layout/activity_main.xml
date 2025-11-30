@@ -38,6 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
+                    android:layout_marginHorizontal="5dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp"
                     android:layout_marginTop="24dp">
@@ -54,7 +55,13 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Age (years)" app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="16dp">
+                            android:hint="Age (years)"
+                            app:boxCornerRadiusTopStart="17dp"
+                            app:boxCornerRadiusTopEnd="17dp"
+                            app:boxCornerRadiusBottomStart="17dp"
+                            app:boxCornerRadiusBottomEnd="17dp"
+                            app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="16dp">
+
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/ageEditText"
                                 android:layout_width="match_parent"
@@ -66,7 +73,12 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Weight (kg)" app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="16dp">
+                            android:hint="Weight (kg)"
+                            app:boxCornerRadiusTopStart="17dp"
+                            app:boxCornerRadiusTopEnd="17dp"
+                            app:boxCornerRadiusBottomStart="17dp"
+                            app:boxCornerRadiusBottomEnd="17dp"
+                            app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="16dp">
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/weightEditText"
                                 android:layout_width="match_parent"
@@ -78,7 +90,12 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Height (cm)" app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="16dp">
+                            android:hint="Height (cm)"
+                            app:boxCornerRadiusTopStart="17dp"
+                            app:boxCornerRadiusTopEnd="17dp"
+                            app:boxCornerRadiusBottomStart="17dp"
+                            app:boxCornerRadiusBottomEnd="17dp"
+                            app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="16dp">
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/heightEditText"
                                 android:layout_width="match_parent"
@@ -90,7 +107,12 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Serum Creatinine (mg/dL)" app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="16dp">
+                            android:hint="Serum Creatinine (mg/dL)"
+                            app:boxCornerRadiusTopStart="17dp"
+                            app:boxCornerRadiusTopEnd="17dp"
+                            app:boxCornerRadiusBottomStart="17dp"
+                            app:boxCornerRadiusBottomEnd="17dp"
+                            app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="16dp">
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/creatinineEditText"
                                 android:layout_width="match_parent"
@@ -102,7 +124,12 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Cp0 (mg/L)" app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="24dp">
+                            android:hint="Cp0 (mg/L)"
+                            app:boxCornerRadiusTopStart="17dp"
+                            app:boxCornerRadiusTopEnd="17dp"
+                            app:boxCornerRadiusBottomStart="17dp"
+                            app:boxCornerRadiusBottomEnd="17dp"
+                            app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="24dp">
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/cssEditText"
                                 android:layout_width="match_parent"
@@ -135,6 +162,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
+                    android:layout_marginHorizontal="5dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp">
                     <LinearLayout
@@ -149,7 +177,12 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="K (Rate of elimination)" app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="16dp">
+                            android:hint="K (Rate of elimination)"
+                            app:boxCornerRadiusTopStart="17dp"
+                            app:boxCornerRadiusTopEnd="17dp"
+                            app:boxCornerRadiusBottomStart="17dp"
+                            app:boxCornerRadiusBottomEnd="17dp"
+                            app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="16dp">
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/kRateEditText"
                                 android:layout_width="match_parent"
@@ -161,7 +194,12 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="A (Intercept)" app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="16dp">
+                            android:hint="A (Intercept)"
+                            app:boxCornerRadiusTopStart="17dp"
+                            app:boxCornerRadiusTopEnd="17dp"
+                            app:boxCornerRadiusBottomStart="17dp"
+                            app:boxCornerRadiusBottomEnd="17dp"
+                            app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="16dp">
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/interceptAEditText"
                                 android:layout_width="match_parent"
@@ -173,7 +211,12 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="T 1/2 a" app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="16dp">
+                            android:hint="T 1/2 a"
+                            app:boxCornerRadiusTopStart="17dp"
+                            app:boxCornerRadiusTopEnd="17dp"
+                            app:boxCornerRadiusBottomStart="17dp"
+                            app:boxCornerRadiusBottomEnd="17dp"
+                            app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF" android:layout_marginBottom="16dp">
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/tHalfAEditText"
                                 android:layout_width="match_parent"
@@ -185,7 +228,12 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="T 1/2 b" app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF">
+                            android:hint="T 1/2 b"
+                            app:boxCornerRadiusTopStart="17dp"
+                            app:boxCornerRadiusTopEnd="17dp"
+                            app:boxCornerRadiusBottomStart="17dp"
+                            app:boxCornerRadiusBottomEnd="17dp"
+                            app:boxStrokeColor="#80D8FF" app:hintTextColor="#80D8FF">
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/tHalfBEditText"
                                 android:layout_width="match_parent"
@@ -252,6 +300,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
+                        android:layout_marginHorizontal="5dp"
                         app:cardCornerRadius="16dp"
                         app:cardElevation="6dp"
                         app:cardBackgroundColor="#E8F5E9">
@@ -283,6 +332,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
+                        android:layout_marginHorizontal="5dp"
                         app:cardCornerRadius="16dp"
                         app:cardElevation="6dp"
                         app:cardBackgroundColor="#F3F9FF">
@@ -306,6 +356,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
                         app:cardCornerRadius="16dp"
                         app:cardElevation="6dp"
                         app:cardBackgroundColor="#FFFDE7">
@@ -366,6 +417,8 @@
                 android:backgroundTint="#FF9800"
                 app:cornerRadius="12dp"
                 android:textSize="16sp"/>
+
+
 
         </LinearLayout>
     </com.google.android.material.navigation.NavigationView>

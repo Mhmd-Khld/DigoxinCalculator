@@ -1,8 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.Theme.DigoxinCalculator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Base.Theme.DigoxinCalculator" parent="Theme.MaterialComponents.Light.NoActionBar">
     </style>
 
-    <style name="Theme.DigoxinCalculator" parent="Base.Theme.DigoxinCalculator" />
+
+    <style name="Theme.DigoxinCalculator" parent="Base.Theme.DigoxinCalculator">
+        <item name="android:statusBarColor">#03A9F4</item>
+    </style>
 
     <style name="PointStyle">
         <item name="android:layout_width">match_parent</item>
@@ -46,6 +49,13 @@
     <style name="AppTheme.SolidSplash" parent="Base.Theme.DigoxinCalculator">
         <item name="android:windowBackground">@android:color/white</item>
     </style>
+
+
+
+
+
+
+
 
 
 

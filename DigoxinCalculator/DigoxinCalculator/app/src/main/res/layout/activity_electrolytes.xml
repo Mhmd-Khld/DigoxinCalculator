@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".ElectrolytesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hyper &amp; Hypo Electrolytes"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#3F51B5"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Hypokalemia - The Greatest Risk"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#E91E63"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="Effect on Digoxin"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Hypokalemia is the most common and strongest risk factor leading to digoxin toxicity."/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Mechanism: Digoxin works by inhibiting the sodium-potassium (Na/KATPase) pump on cardiac muscle cells. When serum potassium levels are low, the digoxin binding sites on this pump become more readily available to digoxin. This strong and excessive binding increases the potency of digoxin to the point of toxicity."/>
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="Action Required"/>
+        <TextView
+            style="@style/NumberedListItemStyle"
+            android:text="1. Immediate Correction: Hypokalemia must be corrected so that serum potassium levels are maintained in the upper normal range (usually recommended ≥4.0 mEq or higher in patients taking digoxin)."/>
+        <TextView
+            style="@style/NumberedListItemStyle"
+            android:text="2. Monitoring for poisoning: Digoxin should be temporarily stopped if poisoning is suspected until potassium levels are corrected."/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Hypercalcemia - Risk of Toxicity"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="Effect on Digoxin"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Hypercalcemia increases the sensitivity of the myocardium to digoxin."/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Mechanism: Digoxin acts indirectly to increase the concentration of calcium within cardiac cells, thereby increasing the force of myocardial contraction (strengthening effect). When blood calcium is already high, this exacerbates the effect of digoxin and increases the risk of fatal arrhythmias."/>
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="Action Required:"/>
+        <TextView
+            style="@style/NumberedListItemStyle"
+            android:text="1. Treat the Cause: The underlying cause of hypercalcemia must be treated."/>
+        <TextView
+            style="@style/NumberedListItemStyle"
+            android:text="2. Extreme Caution: In cases of digoxin poisoning, intravenous calcium should be avoided except when absolutely necessary and with the utmost caution, as it may lead to serious cardiac arrhythmias"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. Hypomagnesemia (Magnesium Deficiency)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="Effect on Digoxin"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Magnesium deficiency, or both potassium and magnesium deficiency, increases digoxin toxicity and makes it more difficult to treat arrhythmias caused by poisoning."/>
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="Required Action"/>
+        <TextView
+            style="@style/NumberedListItemStyle"
+            android:text="1. Correction: Magnesium deficiency should be corrected in parallel with potassium deficiency correction."/>
+        <TextView
+            style="@style/NumberedListItemStyle"
+            android:text="2. Therapeutic Importance: In cases of digoxin poisoning with arrhythmia, intravenous magnesium is often given as part of the treatment, even if its levels are normal, because it helps stabilize the myocardium"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. Hyperkalemia (Increased Potassium)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="Effect on Digoxin"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Increased potassium does not normally increase digoxin toxicity, but in the context of digoxin patients, it is considered a sign of severe acute poisoning."/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Mechanism: Acute digoxin poisoning leads to widespread inhibition of the sodium-potassium pump in all body cells. This prevents potassium from entering cells, resulting in elevated blood levels (hyperkalemia), a life-threatening condition."/>
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="Action Required:"/>
+        <TextView
+            style="@style/NumberedListItemStyle"
+            android:text="1. Terminate Dose: Stop digoxin immediately."/>
+        <TextView
+            style="@style/NumberedListItemStyle"
+            android:text="2. Urgent Intervention: A potassium level greater than 5.5 mEq/L - 5.0 in a patient taking digoxin is a strong indication for rapid intervention using digoxin-specific antibody fragments"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medical Procedure (Hyperthyroidism)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#9C27B0"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="A patient with hyperthyroidism taking digoxin usually requires higher than usual doses."/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="However, the optimal treatment is to correct thyroid function, after which cardiac sensitivity to digoxin returns to normal, and the dose should then be reduced to the normal level to avoid toxicity."/>
+
+    </LinearLayout>
+</ScrollView>

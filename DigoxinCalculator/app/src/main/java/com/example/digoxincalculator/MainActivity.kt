@@ -6,21 +6,27 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
-import android.widget.RadioButton
-import android.widget.RadioGroup
 import android.widget.TextView
 import android.view.MenuItem
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.core.view.GravityCompat
 import android.content.Intent
 import com.google.android.material.navigation.NavigationView
-import androidx.appcompat.widget.Toolbar // تم إضافة هذا الاستدعاء
+import androidx.appcompat.widget.Toolbar
+import com.google.android.material.button.MaterialButtonToggleGroup
+import com.google.android.material.button.MaterialButton
+// ❌ تم حذف استدعاءات RadioGroup و RadioButton التي لم تعد مستخدمة
+import android.os.Build
+import android.view.WindowInsets
+import android.view.WindowInsetsController
+import android.view.WindowManager
+import android.widget.ScrollView // ⭐️ يجب استيراد ScrollView
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
-    private lateinit var toolbar: Toolbar // تعريف المتغير للـ Toolbar
+    private lateinit var toolbar: Toolbar
 
     private lateinit var ageEditText: EditText
     private lateinit var weightEditText: EditText
@@ -31,17 +37,32 @@ class MainActivity : AppCompatActivity() {
     private lateinit var interceptAEditText: EditText
     private lateinit var tHalfAEditText: EditText
     private lateinit var tHalfBEditText: EditText
-    private lateinit var genderRadioGroup: RadioGroup
-    private lateinit var maleRadioButton: RadioButton
-    private lateinit var diagnosisRadioGroup: RadioGroup
-    private lateinit var afRadioButton: RadioButton
-    private lateinit var bothRadioButton: RadioButton
-    private lateinit var routeRadioGroup: RadioGroup
-    private lateinit var ivRadioButton: RadioButton
+
+    // ⭐️ تعاريف MaterialButtonToggleGroup ⭐️
+    // 1. الجنس
+    private lateinit var genderToggleGroup: MaterialButtonToggleGroup
+    private lateinit var maleButton: MaterialButton
+    private lateinit var femaleButton: MaterialButton
+
+    // 2. التشخيص
+    private lateinit var diagnosisToggleGroup: MaterialButtonToggleGroup
+    private lateinit var afButton: MaterialButton
+    private lateinit var bothButton: MaterialButton
+    private lateinit var chfButton: MaterialButton // تم إضافة زر CHF
+
+    // 3. طريق الإعطاء
+    private lateinit var routeToggleGroup: MaterialButtonToggleGroup
+    private lateinit var ivButton: MaterialButton
+    private lateinit var oralButton: MaterialButton // تم إضافة زر Oral
+
     private lateinit var calculateButton: Button
     private lateinit var errorTextView: TextView
     private lateinit var resultsLayout: LinearLayout
     private lateinit var resetButton: Button
+
+    // ⭐️ إضافة تعريف ScrollView هنا ⭐️
+    private lateinit var scrollView: ScrollView
+
 
     private lateinit var resultWeightTextView: TextView
     private lateinit var resultMgTextView: TextView
@@ -65,10 +86,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var resultCmaxTextView: TextView
 
     private lateinit var notesButton: Button
+    private lateinit var teamMemberButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         setContentView(R.layout.activity_main)
+
 
         // ============ A. ربط القائمة الجانبية والـ Toolbar ============
         drawerLayout = findViewById(R.id.drawer_layout)
@@ -92,16 +117,29 @@ class MainActivity : AppCompatActivity() {
         interceptAEditText = findViewById(R.id.interceptAEditText)
         tHalfAEditText = findViewById(R.id.tHalfAEditText)
         tHalfBEditText = findViewById(R.id.tHalfBEditText)
-        genderRadioGroup = findViewById(R.id.genderRadioGroup)
-        maleRadioButton = findViewById(R.id.maleRadioButton)
-        diagnosisRadioGroup = findViewById(R.id.diagnosisRadioGroup)
-        afRadioButton = findViewById(R.id.afRadioButton)
-        bothRadioButton = findViewById(R.id.bothRadioButton)
-        routeRadioGroup = findViewById(R.id.routeRadioGroup)
-        ivRadioButton = findViewById(R.id.ivRadioButton)
+
+        // ⭐️ ربط عناصر الجنس ⭐️
+        genderToggleGroup = findViewById(R.id.genderToggleGroup)
+        maleButton = findViewById(R.id.maleButton)
+        femaleButton = findViewById(R.id.femaleButton)
+
+        // ⭐️ ربط عناصر التشخيص ⭐️
+        diagnosisToggleGroup = findViewById(R.id.diagnosisToggleGroup)
+        afButton = findViewById(R.id.afButton)
+        bothButton = findViewById(R.id.bothButton)
+        chfButton = findViewById(R.id.chfButton)
+
+        // ⭐️ ربط عناصر طريق الإعطاء ⭐️
+        routeToggleGroup = findViewById(R.id.routeToggleGroup)
+        ivButton = findViewById(R.id.ivButton)
+        oralButton = findViewById(R.id.oralButton)
+
         calculateButton = findViewById(R.id.calculateButton)
         errorTextView = findViewById(R.id.errorTextView)
         resultsLayout = findViewById(R.id.resultsLayout)
+
+        // ⭐️ ربط ScrollView هنا (يجب أن يكون ID الـ ScrollView في XML هو @+id/scrollView) ⭐️
+        scrollView = findViewById(R.id.scrollView)
 
         // ============ C. ربط عناصر عرض النتائج ============
         resultWeightTextView = findViewById(R.id.resultWeightTextView)
@@ -143,6 +181,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             drawerLayout.closeDrawer(GravityCompat.END)
         }
+
+        teamMemberButton = navigationView.findViewById(R.id.teamMemberButton) // يجب أن يكون ID الزر في ملف القائمة هو teamMemberButton
+        teamMemberButton.setOnClickListener {
+            // ستحتاج لإنشاء هذا الـ Activity لاحقًا
+            val intent = Intent(this, TeamMemberActivity::class.java)
+            startActivity(intent)
+            drawerLayout.closeDrawer(GravityCompat.END)
+        }
     }
 
     // ============ F. دالة التعامل مع الضغط على أزرار القائمة ============
@@ -174,13 +220,19 @@ class MainActivity : AppCompatActivity() {
             val tHalfA = tHalfAEditText.text.toString().toDoubleOrNull()
             val tHalfB = tHalfBEditText.text.toString().toDoubleOrNull()
 
-            val selectedGender = if (maleRadioButton.isChecked) Gender.MALE else Gender.FEMALE
-            val selectedDiagnosis = when (diagnosisRadioGroup.checkedRadioButtonId) {
-                R.id.afRadioButton -> Diagnosis.AF
-                R.id.bothRadioButton -> Diagnosis.BOTH
-                else -> Diagnosis.CHF
+            // ⭐️ اللوجيك المعدل للجنس ⭐️
+            val selectedGender = if (genderToggleGroup.checkedButtonId == R.id.maleButton) Gender.MALE else Gender.FEMALE
+
+            // ⭐️ اللوجيك المعدل للتشخيص ⭐️
+            val selectedDiagnosis = when (diagnosisToggleGroup.checkedButtonId) {
+                R.id.afButton -> Diagnosis.AF
+                R.id.bothButton -> Diagnosis.BOTH
+                R.id.chfButton -> Diagnosis.CHF
+                else -> Diagnosis.CHF // افتراض CHF كقيمة افتراضية إذا لم يتم الاختيار
             }
-            val selectedRoute = if (ivRadioButton.isChecked) Route.IV else Route.ORAL
+
+            // ⭐️ اللوجيك المعدل لطريق الإعطاء ⭐️
+            val selectedRoute = if (routeToggleGroup.checkedButtonId == R.id.ivButton) Route.IV else Route.ORAL
 
             val params = CalculationParams(
                 age, weight, height, creatinine, css, selectedGender, selectedDiagnosis, selectedRoute,
@@ -213,6 +265,12 @@ class MainActivity : AppCompatActivity() {
 
                 resultsLayout.visibility = View.VISIBLE
                 errorTextView.visibility = View.GONE
+
+                // 🚀 كود النزول التلقائي هنا 🚀
+                scrollView.post {
+                    scrollView.fullScroll(View.FOCUS_DOWN)
+                }
+
             } else {
                 showError("Please enter valid numbers > 0")
             }
@@ -226,6 +284,10 @@ class MainActivity : AppCompatActivity() {
         errorTextView.text = message
         errorTextView.visibility = View.VISIBLE
         resultsLayout.visibility = View.GONE
+
+        scrollView.post {
+            scrollView.fullScroll(View.FOCUS_DOWN)
+        }
     }
 
 
@@ -241,11 +303,20 @@ class MainActivity : AppCompatActivity() {
         tHalfAEditText.text.clear()
         tHalfBEditText.text.clear()
 
-        // *ملاحظة*: لا نحتاج لـ findViewById هنا لأننا عرفنا المتغيرات في الأعلى (ageEditText, إلخ)
+        genderToggleGroup.uncheck(R.id.maleButton)
+        genderToggleGroup.uncheck(R.id.femaleButton)
 
-        // 2. إعادة تعيين أزرار الاختيار (Optional)
-        // يمكنك اختيار إعادة تعيينها إلى الخيار الافتراضي إذا أردت
-        // genderRadioGroup.clearCheck()
+// إلغاء تحديد مجموعة التشخيص
+        diagnosisToggleGroup.uncheck(R.id.afButton)
+        diagnosisToggleGroup.uncheck(R.id.bothButton)
+        diagnosisToggleGroup.uncheck(R.id.chfButton)
+
+// إلغاء تحديد مجموعة طريق الإعطاء
+        routeToggleGroup.uncheck(R.id.ivButton)
+        routeToggleGroup.uncheck(R.id.oralButton)
+
+        // 2. إعادة تعيين أزرار الاختيار (اختياري: يمكن تركها كما هي لتعكس آخر اختيار)
+        // يمكن استخدام genderToggleGroup.clearCheck() إذا كنت تريد إلغاء التحديد
 
         // 3. مسح أو إعادة تعيين النتائج المعروضة (TextViews)
         resultWeightTextView.text = ""

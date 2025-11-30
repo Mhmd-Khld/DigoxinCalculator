@@ -11,19 +11,53 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DigoxinCalculator">
-        <activity android:name=".KidneyDisordersActivity" android:parentActivityName=".NotesActivity" />
+        <activity
+            android:name=".ChildrenNewbornsActivity"
+            android:exported="false"
+            android:parentActivityName=".NotesActivity"
+            android:label="Children &amp; Newborns Dosage"/>
+        <activity
+            android:name=".PregnancyActivity"
+            android:exported="false"
+            android:parentActivityName=".NotesActivity"
+            android:label="Pregnancy Guidelines"/>
+        <activity
+            android:name=".GITDisordersActivity"
+            android:exported="false"
+            android:parentActivityName=".NotesActivity"
+            android:label="GIT Disorders Notes"/>
+
+        <activity
+            android:name=".ElectrolytesActivity"
+            android:exported="false"
+            android:parentActivityName=".NotesActivity"
+            android:label="Electrolytes Notes"/>
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.SolidSplash">  <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
+        <activity android:name=".KidneyDisordersActivity"
+            android:parentActivityName=".NotesActivity"/>
+
+        <activity android:name=".ElderlyDosingActivity"
+            android:parentActivityName=".NotesActivity"/>
+
+
+
         <activity
             android:name=".NotesActivity"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false">
         </activity>
+
     </application>
 
 </manifest>

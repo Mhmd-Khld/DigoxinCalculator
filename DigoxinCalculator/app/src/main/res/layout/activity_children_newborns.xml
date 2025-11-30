@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".ChildrenNewbornsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👶🏼 Digoxin Dosage in Children &amp; Newborns"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_horizontal"/>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Key Ways Age Influences Digoxin Dosage"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#3F51B5"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="1. Immature Renal Function (Neonates and Infants):"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="The Risk: Digoxin is primarily eliminated by the kidneys. Renal function (GFR) in newborns and premature infants is less mature and less efficient."/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Dose Impact: The rate of Digoxin clearance is slower, and the drug's half-life is much longer (61–170 hours in preemies vs. ~36 hours in adults). Neonates require significantly lower daily doses (relative to weight)."/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:text="2. Larger Volume of Distribution (Infants and Young Children):"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="The Cause: Infants and children (1 month to 2 years) often require relatively higher doses per kilogram of body weight compared to all other age groups."/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="The Explanation: Digoxin distributes more widely into body tissues in this age group, so a larger dose is needed to achieve the therapeutic level."/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:text="3. Progressive Maturation:"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="As the child grows (after age two until ~ten years), kidney and liver functions mature. The required dose per kilogram gradually decreases to approach the typical adult dose by adolescence."/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:text="4. Toxicity Tolerance:"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Clinical experience suggests that infants can sometimes tolerate higher serum Digoxin levels than adults without toxicity symptoms. This emphasizes dose guidance by clinical response and serum levels."/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clinical Monitoring Procedures in Children"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <TextView
+                style="@style/PointStyle"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:text="1. Therapeutic Drug Monitoring (TDM):"/>
+            <TextView
+                style="@style/PointStyle"
+                android:layout_marginStart="8dp"
+                android:text="Absolutely indispensable. The child's serum Digoxin level must be measured regularly to ensure it stays within the therapeutic range (typically between 0.5 to 2.0 ng/mL, keeping in mind the tolerance for higher levels in infants mentioned above)."/>
+
+            <TextView
+                style="@style/PointStyle"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_marginTop="8dp"
+                android:text="2. Renal Function Monitoring:"/>
+            <TextView
+                style="@style/PointStyle"
+                android:layout_marginStart="8dp"
+                android:text="Creatinine levels must be measured regularly, especially in neonates and children with kidney issues, as any impairment requires an immediate dose reduction."/>
+
+            <TextView
+                style="@style/PointStyle"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_marginTop="8dp"
+                android:text="3. Cardiac Monitoring (ECG):"/>
+            <TextView
+                style="@style/PointStyle"
+                android:layout_marginStart="8dp"
+                android:text="Electrocardiograms (ECGs) should be monitored frequently, particularly during the dose initiation phase, to detect any signs of Digoxin toxicity such as Sinus Bradycardia (slow heart rate) or other arrhythmias."/>
+
+            <TextView
+                style="@style/PointStyle"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_marginTop="8dp"
+                android:text="4. Electrolyte Monitoring:"/>
+            <TextView
+                style="@style/PointStyle"
+                android:layout_marginStart="8dp"
+                android:text="Normal potassium levels must be maintained, as Hypokalemia (low potassium) significantly increases the risk of Digoxin toxicity."/>
+
+            <TextView
+                style="@style/PointStyle"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_marginTop="8dp"
+                android:text="5. Awareness of Toxicity Symptoms:"/>
+            <TextView
+                style="@style/PointStyle"
+                android:layout_marginStart="8dp"
+                android:text="In children, toxicity symptoms can be non-specific or different from adults. The most common signs are: vomiting, nausea, loss of appetite, lethargy, and Bradycardia (slow heart rate). The doctor must be immediately informed of any change in the child's behavior, feeding habits, or heart rate."/>
+
+            <TextView
+                style="@style/PointStyle"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_marginTop="8dp"
+                android:text="6. Dosage Accuracy:"/>
+            <TextView
+                style="@style/PointStyle"
+                android:layout_marginStart="8dp"
+                android:text="A calibrated syringe or dropper must be used to measure the dose with extreme precision; household spoons should never be relied upon."/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

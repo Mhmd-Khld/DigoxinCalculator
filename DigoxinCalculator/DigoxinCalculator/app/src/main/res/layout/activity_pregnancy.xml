@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".PregnancyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🤰🏼 Digoxin Dosage in Pregnant Women"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#C2185B"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="Disclaimer: This information is general and does not substitute for direct medical consultation and dose adjustment by the treating physician, especially given Digoxin's narrow therapeutic index."/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Key Factors Affecting Digoxin Dosage in Pregnancy"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#D81B60"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="Increased Blood Volume and Renal Clearance:"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="During pregnancy, blood volume significantly increases, and the rate at which the body clears the drug (renal clearance) accelerates (especially in the third trimester). This often requires an increase in the Digoxin dose to maintain the required therapeutic level."/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:text="Kidney Function (The Most Important Factor):"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Digoxin is primarily eliminated by the kidneys. Therefore, kidney function is the most crucial determinant of the dosage. If there is any impairment, the dose must be reduced to prevent drug accumulation and toxicity."/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:text="Age in Context:"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Age is not the primary factor, but advanced maternal age can increase the likelihood of co-existing chronic health conditions that might necessitate dose adjustment (e.g., pre-existing kidney disease). However, the overall impact of increased renal clearance due to pregnancy usually dominates."/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🩺 General Advice and Guidelines for Pregnant Patients"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#3F51B5"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="Specialized Medical Follow-up:"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Monitoring should be conducted by a multidisciplinary team including a Cardiologist and an Obstetrician specializing in high-risk pregnancies."/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:text="Therapeutic Drug Monitoring (TDM):"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="This is critical. Digoxin levels must be measured regularly (ideally 6–12 hours after the last dose) to ensure they remain within the safe therapeutic range (typically 0.5 to 2.0 ng/mL, with lower ranges sometimes preferred)."/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:text="Toxicity Awareness:"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="The patient must be vigilant for any signs of Digoxin toxicity, such as: nausea, vomiting, visual disturbances (seeing halos), irregular heartbeat, weakness, or lethargy. Notify the doctor immediately if these occur."/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:text="Electrolyte Balance:"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Levels of Potassium, Magnesium, and Calcium must be monitored regularly. Low potassium (hypokalemia) can significantly increase the risk of Digoxin toxicity."/>
+
+    </LinearLayout>
+</ScrollView>

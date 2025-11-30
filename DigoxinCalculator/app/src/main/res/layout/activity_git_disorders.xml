@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".GITDisordersActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GIT Disorders"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#3F51B5"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:text="Any problems that affect the absorption of the drug from the gastrointestinal tract can lead to a decrease in the concentration of digoxin in the blood. Thus failure of treatment (therapeutic failure)."/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Digoxin is mainly absorbed in the upper part of the duodenum and jejunum."/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Here are the most important digestive problems that can hinder the absorption of digoxin in both tablets and capsules."/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Increased Gut Motility"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#E91E63"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="The Trouble:"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Cases that increase the passage of food and the contents of the intestines, such as: Severe Diarrhea for any cause, Malabsorption Syndromes, or active inflammatory diseases."/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:text="Its Impact on Digoxin:"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Digoxin takes time to disintegrate, dissolve and absorb. When tablets/capsules pass very quickly through the intestines, they do not get time for full absorption, resulting in a decrease in bioavailability and a decrease in the therapeutic concentration in blood."/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Altered Gut Flora (Eubacterium Lentum)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="Problem:"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="The presence of certain types of bacteria (like Eubacterium Lentum) in the colon that can metabolize and convert digoxin into inactive metabolites (like dihydrodigoxin)."/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:text="Its Effect on Digoxin (Decreased absorption):"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="This bacterial diversion is usually limited, but in some patients with high colonies of these bacteria, it can break a large portion of the drug before it is absorbed, reducing its concentration in blood."/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:text="Antibiotic Therapy Risk:"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="If a patient with this bacterium takes broad-spectrum antibiotics (like erythromycin or tetracycline), these antibiotics kill the bacteria, leading to a sudden and significant increase in digoxin absorption (as the breakdown process stops). This may lead to digoxin toxicity."/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. Gastrointestinal Surgeries"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="Problem:"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Any surgery that alters the anatomy of the small intestine, especially if it bypasses part of the main absorption site (e.g., Gastric bypass)."/>
+
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:text="Effect on Digoxin:"/>
+        <TextView
+            style="@style/PointStyle"
+            android:text="Reduces the absorption surface area available for digoxin, often requiring careful monitoring of blood digoxin levels and dose adjustments."/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Summary and Procedure for Suspected Malabsorption"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            style="@style/PointStyle"
+            android:textStyle="bold"
+            android:text="Procedure:"/>
+        <TextView
+            style="@style/NumberedListItemStyle"
+            android:text="1. Monitor Concentration: The serum digoxin level should be measured to confirm whether decreased absorption is resulting in a non-therapeutic concentration."/>
+        <TextView
+            style="@style/NumberedListItemStyle"
+            android:text="2. Adjust Dose Route: If the concentration is low and absorption is poor, the following may be considered: Cautiously increase the dose, or Change Route (switch to intravenous (IV) digoxin if appropriate)."/>
+
+    </LinearLayout>
+</ScrollView>

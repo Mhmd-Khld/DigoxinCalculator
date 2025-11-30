@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Bulse dose calc</string>
+
+    <string name="content_elderly_dosing_title">Digoxin Dosing in Patients Over 75 Years Old</string>
 </resources>
