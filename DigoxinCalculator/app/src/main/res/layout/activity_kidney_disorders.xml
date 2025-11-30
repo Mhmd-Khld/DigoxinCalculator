@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    tools:context=".KidneyDisordersActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Effect of Renal Impairment on Digoxin"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#303F9F"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="When the kidneys are impaired, their ability to remove digoxin from the blood decreases, resulting in the following:"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Accumulation"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#00796B"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView style="@style/PointStyle"
+                android:text="• Increased Concentration: Accumulation leads to a significantly higher concentration of digoxin in the blood, even at the usual dose."/>
+
+            <TextView style="@style/PointStyle"
+                android:text="• Increased Half-Life: In severe renal impairment, the half-life of digoxin can be extended to 3.5 to 5 days instead of just 36 hours."/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. High Toxicity Risk"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#D84315"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Digoxin has a narrow therapeutic index (NRI). Drug accumulation due to impaired kidney function makes it very easy for digoxin blood concentrations to exceed the therapeutic limit and enter the toxic range (usually above 20 mL/20), leading to digoxin toxicity."
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Complications of Digoxin Toxicity"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#C2185B"
+            android:layout_marginBottom="10dp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:background="@drawable/table_border"
+            android:layout_marginBottom="20dp">
+
+            <TableRow android:background="#E0F7FA">
+                <TextView style="@style/TableHeaderStyle" android:text="Affected System" />
+                <TextView style="@style/TableHeaderStyle" android:text="Typical Symptoms" />
+            </TableRow>
+
+            <TableRow android:background="#FFFFFF">
+                <TextView style="@style/TableCellStyle" android:text="Heart" />
+                <TextView style="@style/TableCellStyle" android:text="Arrhythmias, such as bradycardia or bidirectional ventricular tachycardia." />
+            </TableRow>
+
+            <TableRow android:background="#F5F5F5">
+                <TextView style="@style/TableCellStyle" android:text="Gastrointestinal" />
+                <TextView style="@style/TableCellStyle" android:text="Nausea, vomiting, loss of appetite, and abdominal pain." />
+            </TableRow>
+
+            <TableRow android:background="#FFFFFF">
+                <TextView style="@style/TableCellStyle" android:text="Nervous System" />
+                <TextView style="@style/TableCellStyle" android:text="Weakness, confusion, blurred vision, or seeing yellow/green halos (xanthopsia)." />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. Procedures Required for Patients with Renal Impairment"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#303F9F"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView style="@style/NumberedListItemStyle"
+                android:text="1. Measure Renal Function: Estimate Creatinine clearance (CrCl) using the Cockcroft-Gault formula. This is the primary indicator of digoxin excretion."/>
+
+            <TextView style="@style/NumberedListItemStyle"
+                android:text="2. Reduce the Maintenance Dose: The daily digoxin dose is reduced based on the CrCl value (more impairment = lower dose)."/>
+
+            <TextView style="@style/NumberedListItemStyle"
+                android:text="3. Monitor Serum Digoxin Level (TDM): Measure the level periodically (usually 5-7 days after starting/adjusting the dose) to keep concentration within the therapeutic range (0.5 to 0.9 ng/mL for heart failure)."/>
+
+            <TextView style="@style/NumberedListItemStyle"
+                android:text="4. Adjusting the Dosing Interval: In severe kidney failure, the usual dose may be given on intermittent days (e.g., 3 times a week) instead of a daily dose."/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
