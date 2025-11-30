@@ -16,8 +16,7 @@ object CalculationService {
             return null
         }
 
-        // *** التعديل هنا: F أصبحت 0.9
-        //بدلاً من 0.7 للـ Oral ***
+        // *** التعديل هنا: F أصبحت 0.9 بدلاً من 0.7 للـ Oral ***
         val bioAvailForDose = if (params.route == Route.IV) 1.0 else 0.9
 
         // 2. IBW
@@ -37,7 +36,7 @@ object CalculationService {
         val totalCl_mL_min = (0.8 * crCl) + clNonRenal
         val totalCl_L_hr = totalCl_mL_min * 0.06
 
-        // 6. Dose (using F=0.9)
+        // 6. Dose
         val maintenanceDoseMcg = (params.css * totalCl_L_hr * TAU_HOURS) / bioAvailForDose
         val maintenanceDoseMg = maintenanceDoseMcg / 1000.0
 
@@ -50,7 +49,7 @@ object CalculationService {
             finalVd = (maintenanceDoseMcg * 1.0) / params.css
             if (finalVd > 0) finalK = totalCl_L_hr / finalVd
         } else {
-            // Oral (Here F is also 0.9 per your request for both simple and complex calculation)
+            // Oral
             if (params.interceptA > 0 && params.tHalfA > 0 && params.tHalfB > 0) {
                 val Ka = 0.693 / params.tHalfA
                 val K_elim = 0.693 / params.tHalfB
@@ -70,6 +69,8 @@ object CalculationService {
 
         val displayKa = if (params.tHalfA > 0) 0.693 / params.tHalfA else 0.0
         val displayKe = if (params.tHalfB > 0) 0.693 / params.tHalfB else 0.0
+
+        // Use calculated Ke if oral and available
         if (params.route == Route.ORAL && params.tHalfB > 0) {
             finalK = displayKe
         }
@@ -107,7 +108,7 @@ object CalculationService {
         // Display text for route
         val routeName = if (params.route == Route.IV) "IV (F=1.0)" else "Oral (F=0.9)"
 
-        // --- \\
+        // --- Result Objects --- \\
         val dosingInfo = DosingInfo(
             patientWeight = String.format("%.1f kg", params.weight),
             doseMg = String.format("%.4f", maintenanceDoseMg),
@@ -137,6 +138,8 @@ object CalculationService {
 
         return DoseResult(dosingInfo, basicPk, clinicalPk)
     }
+
+    // --- Private Functions (Outside the main function) ---
 
     private fun calculateIBW(heightInCm: Double, gender: Gender): Double {
         val heightInInches = heightInCm / 2.54
