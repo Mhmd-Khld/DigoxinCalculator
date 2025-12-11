@@ -15,20 +15,20 @@ data class CalculationParams(
     val gender: Gender,
     val diagnosis: Diagnosis,
     val route: Route,
-    val kRate: Double?,       // تم التعديل للسماح بـ null
-    val interceptA: Double?,  // تم التعديل للسماح بـ null
-    val tHalfA: Double?,      // تم التعديل للسماح بـ null
-    val tHalfB: Double?       // تم التعديل للسماح بـ null
+    val kRate: Double?,
+    val interceptA: Double?,
+    val tHalfA: Double?,
+    val tHalfB: Double?
 )
 
-// Data Class لنتائج الحسابات (النتيجة النهائية)
+
 data class DoseResult(
     val dosingInfo: DosingInfo,
     val basicPk: BasicPkParameters,
     val clinicalPk: ClinicalPkParameters
 )
 
-// Data Class لنتائج الجرعة
+
 data class DosingInfo(
     val patientWeight: String,
     val doseMg: String,
@@ -39,7 +39,7 @@ data class DosingInfo(
     val ldStep3: String
 )
 
-// Data Class لمعلمات الحرائك الدوائية الأساسية
+
 data class BasicPkParameters(
     val totalCl: String,
     val vd: String,
@@ -49,7 +49,7 @@ data class BasicPkParameters(
     val crCl: String
 )
 
-// Data Class لمعلمات الحرائك الدوائية السريرية
+
 data class ClinicalPkParameters(
     val routeInfo: String,
     val halfLife: String,

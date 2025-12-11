@@ -12,7 +12,7 @@ object CalculationService {
 
     fun calculateDigoxinDose(params: CalculationParams): DoseResult? {
 
-        // المنطق الحسابي الخاص بك يبدأ هنا
+
         if (params.age <= 0 || params.weight <= 0 || params.height <= 0 || params.creatinine <= 0 || params.css <= 0) {
             return null
         }
@@ -84,7 +84,7 @@ object CalculationService {
         }
         val routeName = if (params.route == Route.IV) "IV (F=1.0)" else "Oral (F=0.9)"
 
-        // --- تجميع النتائج (باستخدام أسماء الـ Data Classes الموحدة) ---
+
         val dosingInfo = DosingInfo(
             patientWeight = String.format("%.1f kg", params.weight),
             doseMg = String.format("%.4f", maintenanceDoseMg),

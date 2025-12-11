@@ -17,7 +17,7 @@
 
 
 
-        <!-- 💥 تم حذف التعريف الأول الناقص هنا. -->
+
 
         <activity
             android:name=".ChildrenNewbornsActivity"
@@ -51,15 +51,27 @@
             android:name=".NotesActivity"
             android:exported="false" />
 
-        <!-- 💥 هذا هو التعريف النهائي والمدمج لـ MainActivity -->
+
+        <activity
+            android:name=".Splash1Activity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"> <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Splash2Activity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+
         <activity
             android:name=".MainActivity"
-            android:exported="true"
+            android:exported="false"
             android:theme="@style/Theme.DigoxinCalculator"> <!-- تم نقل الثيم من التعريف المحذوف هنا -->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
         <activity

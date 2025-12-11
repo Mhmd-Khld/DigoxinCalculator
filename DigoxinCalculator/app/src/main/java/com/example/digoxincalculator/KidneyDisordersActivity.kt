@@ -2,7 +2,7 @@ package com.example.digoxincalculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem // قد تحتاجها
+import android.view.MenuItem
 
 class KidneyDisordersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +13,7 @@ class KidneyDisordersActivity : AppCompatActivity() {
         supportActionBar?.title = "Kidney Disorders"
     }
 
-    // التعامل مع الضغط على زر الرجوع في شريط العنوان
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressedDispatcher.onBackPressed()
         return true

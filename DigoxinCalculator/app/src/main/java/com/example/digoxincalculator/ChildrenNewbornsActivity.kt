@@ -9,12 +9,12 @@ class ChildrenNewbornsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_children_newborns)
 
-        // إعداد الـ ActionBar لزر الرجوع
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Children & Newborns Dosage" // عنوان هذه الشاشة
+        supportActionBar?.title = "Children & Newborns Dosage"
     }
 
-    // لتفعيل زر الرجوع في الـ ActionBar
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
             onBackPressedDispatcher.onBackPressed()

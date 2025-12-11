@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 
-class ElderlyDosingActivity : AppCompatActivity() { // ⭐ يجب أن تبدأ بـ 'class'
+class ElderlyDosingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_elderly_dosing)

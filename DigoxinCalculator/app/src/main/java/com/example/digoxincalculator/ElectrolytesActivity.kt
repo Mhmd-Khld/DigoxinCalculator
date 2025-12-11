@@ -3,14 +3,14 @@ package com.example.digoxincalculator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.widget.Toolbar // إذا كنت تستخدم Toolbar
+import androidx.appcompat.widget.Toolbar
 
 class ElectrolytesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_electrolytes)
 
-        // إذا كنت تستخدم شريط العنوان التلقائي:
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
