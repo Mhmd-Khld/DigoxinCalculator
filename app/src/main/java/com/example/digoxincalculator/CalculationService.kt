@@ -16,7 +16,6 @@ object CalculationService {
             return null
         }
 
-        // *** التعديل هنا: F أصبحت 0.9 بدلاً من 0.7 للـ Oral ***
         val bioAvailForDose = if (params.route == Route.IV) 1.0 else 0.9
 
         // 2. IBW

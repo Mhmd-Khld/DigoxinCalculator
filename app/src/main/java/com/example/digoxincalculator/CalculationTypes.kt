@@ -40,6 +40,7 @@ data class BasicPkParameters(
     val vd: String,
     val ka: String,
     val ke: String,
+
     val ibw: String,
     val crCl: String
 )
